@@ -1,0 +1,7 @@
+*~
+.DS_Store
+.jsweet/
+target/
+dist/
+src/main/resources/META-INF/resources/
+src/main/resources/src/
