@@ -15,9 +15,20 @@ public class Env {
     public double getCameraZ() { return 0; };    
     public void setDefaultControl(boolean b) {};
     public void setDisplayStr(String str) {} ;
+    public void setDisplayStr(String str, int x, int y) {} ;
+    public void setDisplayStr(String str, int x, int y, double size, double r, double g, double b, double a) {} ;    
     public <T> Collection<T> getObjects(Class<T> c) { return null; };
     public void advanceOneFrame() {};
-    public void advanceOneFrame(int framerate) {};    
+    public void advanceOneFrame(int framerate) {};
+
+    public <T> T getObject(Class<T> c) { return null; };    
+    public int getMouseButtonClicked() { return 0; };
+    public boolean getMouseButtonDown(int button) { return false; };
+    public int getMouseX() {return 0;};
+    public int getMouseY() {return 0;};
+    public int getScreenHeight() {return 0;};
+    public int getScreenWidth() {return 0;};
+    
     public int getKey() { return 0; };
     public int getKeyDown() { return 0; };
     public boolean getKeyDown(int key) { return false; };    
@@ -25,6 +36,9 @@ public class Env {
     public int getMouseDY() { return 0; };
     public boolean isMouseGrabbed() { return false; };
     public void setMouseGrab(boolean grabbed) {};
-    public void setRoom(Object r) { };    
-    public void exit(){};
+    public Object getPick(int x, int y) { return null; };
+    public void setSky(String sky) { };
+    public void setRoom(Object r) { };
+    public void start() { };
+    public void exit() { };
 }
